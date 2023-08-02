@@ -8,13 +8,29 @@
     <link rel="stylesheet" href="cadastro.css">
 
     <title>Formulário</title>
+    <style>
+         .dio {
+            position: absolute;
+            right: 10px;
+            top: 0px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: rgb(230, 70, 70);
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
+    <?php 
+    if (isset($_GET['fail'])) {
+        echo "<div class='dio'>As senhas digitadas não coincidem. Por favor, tente novamente.</div>";
+    }
+    
+    
+    ?>
     <div class="container">
-        <div class="form-image">
-            <img src="images/hc.logo.png" alt="">
-        </div>
+        
         <div class="form">
             <!-- Defina o atributo "action" para indicar o arquivo PHP que irá processar o formulário -->
             <form action="processar_cadastro.php" method="post">
@@ -23,7 +39,7 @@
                         <h1>Cadastre-se</h1>
                     </div>
                     <div class="login-button">
-                        <button><a href="#">Entrar</a></button>
+                        <button><a href="login.php">Entrar</a></button>
                     </div>
                 </div>
 
@@ -39,18 +55,27 @@
                     </div>
 
                     <div class="input-box">
+                        <label for="email">Confirme seu E-mail </label>
+                        <input id="email" type="email" name="confirma_email" placeholder="Confirme seu e-mail" required>
+                    </div>
+
+                    <div class="input-box">
                         <label for="telefone">Telefone</label>
                         <input id="telefone" type="tel" name="telefone" placeholder="(xx) xxxx-xxxx" required>
                     </div>
 
+                
+
                     <div class="input-box">
-                        <label for="data_cadastro">Data de Cadastro</label>
-                        <input id="data_cadastro" type="date" name="data_cadastro" required>
+                        <label for="senha">Senha</label>
+                        <input id="senha" type="senha" name="senha" placeholder="Digite sua senha" required>
                     </div>
 
-                    <!-- Restante do formulário permanece o mesmo -->
-
-                    <!-- ... -->
+                    
+                    <div class="input-box">
+                        <label for="senha">Confime sua senha</label>
+                        <input id="senha" type="senha" name="confirma_senha" placeholder="Confirme sua senha" required>
+                    </div>
 
                 </div>
 

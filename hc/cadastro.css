@@ -12,38 +12,31 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #0c0ce94d;
-}
-
-.container {
+    background: black;
+    margin: 0; /* Adicionei essa linha para remover a margem padrão do body */
+  }
+  
+  .container {
     width: 80%;
-    height: 80vh;
-    display: flex;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
-}
-
-.form-image {
-    width: 50%;
+    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fde3a7d7;
-    padding: 1rem;
-}
-
-.form-image img {
-    width: 31rem;
-}
-
-.form {
-    width: 50%;
+    /* Alterando a cor do fundo branco */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+  }
+  
+  .form {
+    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: white;
     padding: 3rem;
-}
+    border-radius: 10px;
+  }
+  
 
 .form-header {
     margin-bottom: 3rem;

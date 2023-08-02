@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   </head>
   <body>
+    <?php
+      session_start();
+    ?>
     <!-- Header or Navbar -->
     <header class="header">
       <nav class="navbar max-width">
@@ -21,9 +24,15 @@
             <span class="material-symbols-outlined">language</span>
             <a href="#">English</a>
           </li>
-          <li><a href="#">Become a seller</a></li>
+          <li><?php 
+              if (isset($_SESSION['idUsuario'])){
+                echo "<a href='#'>Agendamento</a>";
+              }else{
+                echo "<a href=''>Cadastrar</a>";
+            }?></li>
           <li class="btn signin"><a href="cadastro.php">Cadastro</a></li>
           <li class="btn join"><a href="login.php">Login</a></li>
+          <li class="btn join"><a href="sair.php">SAIR</a></li>
         </ul>
       </nav>
     </header>
@@ -40,7 +49,8 @@
           Popular:
           <ul class="link">
             <li><a href="#">Web Design</a></li>
-            <li><a href="#">WordPress</a></li>
+            <li>
+            </li>
             <li><a href="#">Logo Design</a></li>
             <li><a href="#">AI Design</a></li>
           </ul>
